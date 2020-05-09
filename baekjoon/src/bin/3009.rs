@@ -6,11 +6,11 @@ macro_rules! parse_line { ($($t: ty),+) => ({
 })}
 
 fn main(){
-    let (mut A, mut B) = (0, 0);
+    let (mut aa, mut bb) = (0, 0);
     for _ in 0..3 {
         let (a, b) = parse_line!(i32, i32);
-        A ^= a;
-        B ^= b;
+        aa ^= a;
+        bb ^= b;
     }
-    println!("{} {}", A, B);
+    println!("{} {}", aa, bb);
 }
