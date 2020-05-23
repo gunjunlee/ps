@@ -10,12 +10,12 @@ fn poo(mut pos: &mut [[i32; 17]; 17], x: usize, size: usize) -> i32 {
                     break;
                 }
                 if i >= j {
-                    pos[x+j][i-j] += 1;
+                    pos[x + j][i - j] += 1;
                 }
                 if i + j < size {
-                    pos[x+j][i+j] += 1;
+                    pos[x + j][i + j] += 1;
                 }
-                pos[x+j][i] += 1;
+                pos[x + j][i] += 1;
             }
             ans += poo(&mut pos, x + 1, size);
             for j in 1..size {
@@ -23,12 +23,12 @@ fn poo(mut pos: &mut [[i32; 17]; 17], x: usize, size: usize) -> i32 {
                     break;
                 }
                 if i >= j {
-                    pos[x+j][i-j] -= 1;
+                    pos[x + j][i - j] -= 1;
                 }
                 if i + j < size {
-                    pos[x+j][i+j] -= 1;
+                    pos[x + j][i + j] -= 1;
                 }
-                pos[x+j][i] -= 1;
+                pos[x + j][i] -= 1;
             }
         }
     }

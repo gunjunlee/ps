@@ -14,7 +14,7 @@ fn main() {
     loop {
         let (a, b) = parse_line!(i32, i32);
         if a == 0 && b == 0 {
-            break
+            break;
         }
         writeln!(out, "{}", a + b).unwrap();
     }

@@ -5,16 +5,19 @@ macro_rules! parse_line { ($($t: ty),+) => ({
     ($(iter.next().unwrap().parse::<$t>().unwrap()),+)
 })}
 
+macro_rules! parse_list {
+    ($t: ty) => {{
+        let mut line = String::new();
+        std::io::stdin().read_line(&mut line).unwrap();
+        let list: Vec<$t> = line
+            .split_whitespace()
+            .map(|w| w.parse::<$t>().unwrap())
+            .collect();
+        list
+    }};
+}
 
-macro_rules! parse_list { ($t: ty) => ({
-    let mut line = String::new();
-    std::io::stdin().read_line(&mut line).unwrap();
-    let list: Vec<$t> = line.split_whitespace()
-    .map(|w| w.parse::<$t>().unwrap()).collect(); list
-})}
-
-
-fn main (){
+fn main() {
     let n = parse_line!(usize);
     let nums = parse_list!(i32);
     let nums_rev: Vec<i32> = nums.clone().into_iter().rev().collect();

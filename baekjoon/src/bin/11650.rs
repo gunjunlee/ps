@@ -8,7 +8,7 @@ macro_rules! parse_line { ($($t: ty),+) => ({
 use std::cmp::Ordering::Equal;
 use std::io::Write;
 
-fn main(){
+fn main() {
     let n = parse_line!(i32);
     let mut coords = Vec::<(i32, i32)>::new();
 

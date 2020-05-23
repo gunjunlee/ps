@@ -4,11 +4,9 @@ fn main() {
     let parts: Vec<i32> = inp.split(' ').map(|x| x.trim().parse().unwrap()).collect();
     if parts[0] == parts[1] {
         println!("==")
-    }
-    else if parts[0] < parts[1]{
+    } else if parts[0] < parts[1] {
         println!("<")
-    }
-    else {
+    } else {
         println!(">")
     }
 }

@@ -5,7 +5,7 @@ macro_rules! parse_line { ($($t: ty),+) => ({
     ($(iter.next().unwrap().parse::<$t>().unwrap()),+)
 })}
 
-fn main(){
+fn main() {
     let (mut aa, mut bb) = (0, 0);
     for _ in 0..3 {
         let (a, b) = parse_line!(i32, i32);

@@ -10,8 +10,7 @@ fn main() {
             }
             if ['(', '{', '['].contains(&ch) {
                 stack.push(ch);
-            }
-            else if ch == ')' {
+            } else if ch == ')' {
                 match stack.pop() {
                     Some('(') => (),
                     _ => {
@@ -20,8 +19,7 @@ fn main() {
                         break;
                     }
                 }
-            }
-            else if ch == '}' {
+            } else if ch == '}' {
                 match stack.pop() {
                     Some('{') => (),
                     _ => {
@@ -30,8 +28,7 @@ fn main() {
                         break;
                     }
                 }
-            }
-            else if ch == ']' {
+            } else if ch == ']' {
                 match stack.pop() {
                     Some('[') => (),
                     _ => {

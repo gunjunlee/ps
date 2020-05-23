@@ -7,7 +7,7 @@ macro_rules! parse_line { ($($t: ty),+) => ({
 
 use std::cmp::min;
 
-fn main(){
+fn main() {
     let a = parse_line!(u32);
     let b = parse_line!(u32);
     let c = parse_line!(u32);

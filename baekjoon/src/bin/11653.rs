@@ -9,7 +9,7 @@ fn main() {
     let mut num = parse_line!(u32);
     let mut div = 2;
     while num > 1 {
-        while num % div == 0{
+        while num % div == 0 {
             println!("{}", div);
             num /= div;
         }

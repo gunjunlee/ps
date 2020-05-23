@@ -1,4 +1,4 @@
-fn main(){
+fn main() {
     let (mut max, mut argmax): (i32, i32) = (0, 0);
     for i in 1..10 {
         let mut buf = String::new();

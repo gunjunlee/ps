@@ -1,8 +1,8 @@
-fn main(){
+fn main() {
     let mut buf = String::new();
     std::io::stdin().read_line(&mut buf).unwrap();
     let num: i32 = buf.trim().parse().unwrap();
-    for i in std::cmp::max(0, num-100)..num {
+    for i in std::cmp::max(0, num - 100)..num {
         let mut j = i;
         let mut sum = i;
         while j > 0 {
@@ -11,7 +11,7 @@ fn main(){
         }
         if sum == num {
             println!("{}", i);
-            return ;
+            return;
         }
     }
 

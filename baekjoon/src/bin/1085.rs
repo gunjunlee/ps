@@ -7,7 +7,7 @@ macro_rules! parse_line { ($($t: ty),+) => ({
 
 use std::cmp::min;
 
-fn main(){
+fn main() {
     let (x, y, w, h) = parse_line!(i32, i32, i32, i32);
-    println!("{}", min(min(x, w-x), min(y, h-y)));
+    println!("{}", min(min(x, w - x), min(y, h - y)));
 }

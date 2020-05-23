@@ -14,6 +14,6 @@ fn main() {
 
     for _ in 0..rep {
         let (a, b) = parse_line!(i32, i32);
-        writeln!(out, "{}", a+b).unwrap();
+        writeln!(out, "{}", a + b).unwrap();
     }
 }

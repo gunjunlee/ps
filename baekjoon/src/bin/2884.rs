@@ -5,7 +5,10 @@ struct Time {
 
 impl Time {
     fn init(hour: i32, minute: i32) -> Time {
-        Time {hour: hour, minute: minute}
+        Time {
+            hour: hour,
+            minute: minute,
+        }
     }
     fn alarm(&mut self) {
         self.minute -= 45;
@@ -33,7 +36,11 @@ impl Time {
 fn main() {
     let mut buffer = String::new();
     std::io::stdin().read_line(&mut buffer).unwrap();
-    let v: Vec<i32> = buffer.trim().split(" ").map(|x| x.trim().parse().unwrap()).collect();
+    let v: Vec<i32> = buffer
+        .trim()
+        .split(" ")
+        .map(|x| x.trim().parse().unwrap())
+        .collect();
     let mut time: Time = Time::init(v[0], v[1]);
     time.alarm();
     println!("{} {}", time.hour, time.minute);

@@ -1,4 +1,4 @@
-fn main(){
+fn main() {
     let mut buffer = String::new();
     std::io::stdin().read_line(&mut buffer).unwrap();
     let year: u32 = buffer.trim().parse().unwrap();

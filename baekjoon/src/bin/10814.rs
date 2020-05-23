@@ -7,7 +7,7 @@ macro_rules! parse_line { ($($t: ty),+) => ({
 
 use std::io::Write;
 
-fn main(){
+fn main() {
     let n = parse_line!(i32);
     let mut infos = Vec::<(i32, String)>::new();
 

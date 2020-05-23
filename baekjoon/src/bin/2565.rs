@@ -27,7 +27,7 @@ fn main() {
     }
 
     for i in (0..n).rev() {
-        for j in (i+1..n).rev() {
+        for j in (i + 1..n).rev() {
             if nums[i] < nums[j] {
                 dp_rev[i] = std::cmp::max(dp_rev[j] + 1, dp_rev[i]);
             }

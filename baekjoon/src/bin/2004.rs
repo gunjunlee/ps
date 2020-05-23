@@ -19,9 +19,12 @@ fn main() {
     let (n, m) = parse_line!(u64, u64);
     let fives_n = count_dive(n, 5);
     let fives_m = count_dive(m, 5);
-    let fives_n_m = count_dive(n-m, 5);
+    let fives_n_m = count_dive(n - m, 5);
     let twos_n = count_dive(n, 2);
     let twos_m = count_dive(m, 2);
-    let twos_n_m = count_dive(n-m, 2);
-    println!("{}", std::cmp::min(fives_n - fives_m - fives_n_m, twos_n-twos_m-twos_n_m));
+    let twos_n_m = count_dive(n - m, 2);
+    println!(
+        "{}",
+        std::cmp::min(fives_n - fives_m - fives_n_m, twos_n - twos_m - twos_n_m)
+    );
 }

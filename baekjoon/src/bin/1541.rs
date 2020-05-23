@@ -1,4 +1,4 @@
-fn parse(exp: &str) -> (Vec::<i32>, Vec::<char>) {
+fn parse(exp: &str) -> (Vec<i32>, Vec<char>) {
     let mut start = 0;
     let mut nums = Vec::<&str>::new();
     let mut terms = Vec::<char>::new();
@@ -10,7 +10,10 @@ fn parse(exp: &str) -> (Vec::<i32>, Vec::<char>) {
         }
     }
     nums.push(&exp[start..exp.len()]);
-    let nums = nums.iter().map(|x| x.trim().parse::<i32>().unwrap()).collect();
+    let nums = nums
+        .iter()
+        .map(|x| x.trim().parse::<i32>().unwrap())
+        .collect();
     return (nums, terms);
 }
 

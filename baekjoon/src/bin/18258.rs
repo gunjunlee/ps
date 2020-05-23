@@ -23,7 +23,7 @@ fn main() {
         match split[0] {
             "push" => {
                 queue.push_back(split[1].parse::<i32>().unwrap());
-            },
+            }
             "pop" => {
                 if queue.len() > 0 {
                     writeln!(out, "{}", queue.front().unwrap()).unwrap();
@@ -31,31 +31,28 @@ fn main() {
                 } else {
                     writeln!(out, "{}", -1).unwrap();
                 }
-            },
+            }
             "size" => {
                 writeln!(out, "{}", queue.len()).unwrap();
-            },
+            }
             "empty" => {
-                writeln!(out, "{}", if queue.is_empty() {1} else {0}).unwrap();
-            },
+                writeln!(out, "{}", if queue.is_empty() { 1 } else { 0 }).unwrap();
+            }
             "front" => {
                 if queue.len() > 0 {
                     writeln!(out, "{}", queue.front().unwrap()).unwrap();
                 } else {
                     writeln!(out, "{}", -1).unwrap();
                 }
-
-            },
+            }
             "back" => {
                 if queue.len() > 0 {
                     writeln!(out, "{}", queue.back().unwrap()).unwrap();
                 } else {
                     writeln!(out, "{}", -1).unwrap();
                 }
-            },
-            _ => {
-                ()
             }
+            _ => (),
         }
     }
 }

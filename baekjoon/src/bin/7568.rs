@@ -5,7 +5,7 @@ macro_rules! parse_line { ($($t: ty),+) => ({
     ($(iter.next().unwrap().parse::<$t>().unwrap()),+)
 })}
 
-fn main(){
+fn main() {
     let num = parse_line!(u32);
     let mut specs = Vec::<(u32, u32)>::new();
     for _ in 0..num {
@@ -20,6 +20,6 @@ fn main(){
                 norder += 1;
             }
         }
-        print!("{} ", norder+1);
+        print!("{} ", norder + 1);
     }
 }

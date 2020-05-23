@@ -1,9 +1,14 @@
-macro_rules! parse_list { ($t: ty) => ({
-    let mut line = String::new();
-    std::io::stdin().read_line(&mut line).unwrap();
-    let list: Vec<$t> = line.split_whitespace()
-    .map(|w| w.parse::<$t>().unwrap()).collect(); list
-})}
+macro_rules! parse_list {
+    ($t: ty) => {{
+        let mut line = String::new();
+        std::io::stdin().read_line(&mut line).unwrap();
+        let list: Vec<$t> = line
+            .split_whitespace()
+            .map(|w| w.parse::<$t>().unwrap())
+            .collect();
+        list
+    }};
+}
 
 fn solve_sudoku(mut arr: &mut Vec<Vec<i32>>, x: usize, y: usize) -> bool {
     let (mut xx, mut yy) = (x, y);
@@ -45,7 +50,7 @@ fn solve_sudoku(mut arr: &mut Vec<Vec<i32>>, x: usize, y: usize) -> bool {
     return false;
 }
 
-fn main(){
+fn main() {
     let mut arr = vec![vec![0; 9]; 9];
     for i in 0..9 {
         arr[i] = parse_list!(i32);

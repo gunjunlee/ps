@@ -5,11 +5,11 @@ macro_rules! parse_line { ($($t: ty),+) => ({
     ($(iter.next().unwrap().parse::<$t>().unwrap()),+)
 })}
 
-fn main(){
+fn main() {
     let (a, b, c) = parse_line!(i32, i32, i32);
     if b >= c {
         println!("-1");
     } else {
-        println!("{}", a / (c-b) + 1);
+        println!("{}", a / (c - b) + 1);
     }
 }

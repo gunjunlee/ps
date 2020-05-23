@@ -27,3 +27,13 @@
 //     let list: Vec<$t> = line.split_whitespace()
 //     .map(|w| w.parse::<$t>().unwrap()).collect(); list
 // })}
+
+// #[derive(Debug)]
+// struct NumWithInd<T: std::cmp::Ord> {
+//     num: T,
+//     idx: usize,
+// }
+
+
+// let stdout = std::io::stdout();
+// let mut out = std::io::BufWriter::new(stdout.lock());
